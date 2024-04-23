@@ -1,0 +1,47 @@
+---
+output: pdf_document
+bibliography: inDepthCitations.bib
+csl: apa7.csl
+nocite: '@*'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE, eval=FALSE}
+citation()
+RStudio.Version()$citation
+```
+
+\begin{center}
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./InDepth/InDepthLogo.png}
+\end{center}
+\begin{center}
+  \href{https://github.com/ananyasista/InDepth}{GitHub Repository}
+  
+  \vspace{12pt}
+  
+  STA3100 Final Project Report \\ Spring 2024
+  
+  \vspace{12pt}
+  
+  Ananya Sista \\
+  Elle Strauss
+\end{center}
+
+
+\newpage
+
+## Abstract
+
+## Introduction
+
+## Our App
+
+## Conclusion
+
+## Contribution Statement
+For this project, Elle and Ananya both collaborated on writing the code and designing the user interface. They used GitHub to keep track of changes and allow for easy access. During the development of the project, Ananya and Elle would meet in-person to work on the project, which allowed for easy communication and helped each other write each part of the code. This enabled both to gain experience with writing in R Shiny and figuring the logic behind the functions.
+
+## References

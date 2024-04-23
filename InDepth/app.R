@@ -237,8 +237,9 @@ server <- function(input, output) {
     
   # on submission of intial URLs
     observeEvent(input$submit, {
-      url <- "https://docs.google.com/spreadsheets/d/1Rar9pAxXaCM-9zxgO4KgCv8e15W7Pck-p4NLR8byAz4/edit#gid=0"
-      if (!(input$masterName %in% sheet_names(input$workbook)) | !(input$eventName %in% sheet_names(input$workbook)) | !(input$uniName %in% sheet_names(input$workbook)) | !(input$errors %in% sheet_names(input$workbook))) {
+      if (nchar(input$masterName) == 0 | nchar(input$eventName) == 0 | nchar(input$uniName) == 0 | nchar(input$errors) == 0 | nchar(input$workbook) == 0){ # any input is empty
+        showNotification("One or more of the fields are empty. Please ensure that are fields are completed in order to submit.", duration=15)
+      }else if (!(input$masterName %in% sheet_names(input$workbook)) | !(input$eventName %in% sheet_names(input$workbook)) | !(input$uniName %in% sheet_names(input$workbook)) | !(input$errors %in% sheet_names(input$workbook))) {
         print("throw error")
         showNotification("One or more of the sheet names you entered does not exist in the workbook. Please correct the enteries and retry.", duration=15)
         
@@ -294,7 +295,13 @@ server <- function(input, output) {
         
         observeEvent(input$emails, {
           master <- read_sheet(input$workbook, sheet=input$masterName)
-          emailList(master, input$workbook)
+          if (nrow(master) != 0) { # checks if master has any inputs
+            emailList(master, input$workbook)
+          } else {
+            showNotification("Your Master Sheet is Empty.", duration=15)
+            
+          }
+          
         })
         
         observeEvent(input$memAmt, {
