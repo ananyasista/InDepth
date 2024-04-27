@@ -15,7 +15,7 @@ RStudio.Version()$citation
 ```
 
 \begin{center}
-  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./InDepth/InDepthLogo.png}
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{../InDepth/InDepthLogo.png}
 \end{center}
 \begin{center}
   \href{https://github.com/ananyasista/InDepth}{GitHub Repository}
@@ -34,23 +34,22 @@ RStudio.Version()$citation
 \newpage
 
 ## Abstract
-InDepth is an attendance sheet parser created specifically for the University of Florida organization Women in Computer Science and Engineering (WiCSE), but has features that allow it to be extended to other organizational use. InDepth interfaces directly with Google Sheets, and takes in the URL of an attendance Google Sheets workbook that an organization uses and parses through the data of a specified individual attendance sheet. That data is then appended to a total attendance sheet, a sheet containing unique members and their attendance counts, and an email list to upload to the organization ListServ. Future extensions to the project include UI enhancements, further documentation, and options that allow the software’s functions to be more customizable to the context of the user.
+  InDepth is an attendance sheet parser created specifically for the University of Florida organization Women in Computer Science and Engineering (WiCSE), but has features that allow it to be extended to other organizational use. InDepth interfaces directly with Google Sheets, and takes in the URL of an attendance Google Sheets workbook that an organization uses and parses through the data of a specified individual attendance sheet. That data is then appended to a total attendance sheet, a sheet containing unique members and their attendance counts, and an email list to upload to the organization ListServ. Future extensions to the project include UI enhancements, further documentation, and options that allow the software’s functions to be more customizable to the context of the user.
 
 ## Introduction
-Almost every club at the University of Florida collects attendance data during events and general body meetings. This data is used to keep track of member attendance and to generate demographic data at the end of the year. However, organizations often have different formats for their attendance forms and collect different types of data, so a program created for this purpose is often not reusable across campus clubs. For the purpose of this project, we will be using the attendance form structure that UF WiCSE (University of Florida Women in Computer Science and Engineering) implements to create an interactive data dashboard that will achieve the following objectives: parse through individual event attendance forms, add data to a sheet that holds cumulative attendance data, associates events with the type of event they are, tracks unique members and the number of events they attend, catches errors in the field that is used to identify unique members, and generates demographic charts of member information.
+  Almost every club at the University of Florida collects attendance data during events and general body meetings. This data is used to keep track of member attendance and to generate demographic data at the end of the year. However, organizations often have different formats for their attendance forms and collect different types of data, so a program created for this purpose is often not reusable across campus clubs. For the purpose of this project, we will be using the attendance form structure that UF WiCSE (University of Florida Women in Computer Science and Engineering) implements to create an interactive data dashboard that will achieve the following objectives: parse through individual event attendance forms, add data to a sheet that holds cumulative attendance data, associates events with the type of event they are, tracks unique members and the number of events they attend, catches errors in the field that is used to identify unique members, and generates demographic charts of member information.
 
-Prior to creating InDepth, the WiCSE attendance parsing process was a time-consuming and tedious process. It required the Secretary to set up elaborate excel formulas (as pictured in Figure \ref{fig:mesh1} below), manually copy and paste each individual attendance sheet, and apply various other formulas to graph demographic data. 
+  Prior to creating InDepth, the WiCSE attendance parsing process was a time-consuming and tedious process. It required the Secretary to set up elaborate excel formulas (as pictured in Figure \ref{fig:mesh1} below), manually copy and paste each individual attendance sheet, and apply various other formulas to graph demographic data. 
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./excelFormula.jpg}
+  \includegraphics[]{./excelFormula.jpg}
   \caption{Previous Excel Formula Used to Get Statistics}
   \label{fig:mesh1}
 \end{figure}
-
-To set up the attendance workbook itself took around 2 hours, with an added 15 minutes per event attendance sheet. WiCSE, as other campus organizations, often has over 30 events in a semester with 2-3 happening each week, creating a very time intensive task to do constantly. InDepth provides a mechanism to streamline and automate this process, also creating a parsing system that is less prone to error.
+  To set up the attendance workbook itself took around 2 hours, with an added 15 minutes per event attendance sheet. WiCSE, as other campus organizations, often has over 30 events in a semester with 2-3 happening each week, creating a very time intensive task to do constantly. InDepth provides a mechanism to streamline and automate this process, also creating a parsing system that is less prone to error.
 
 ## Program Workflow
-As InDepth was created anticipating a certain attendance sheet structure, a detailed explanation is required for optimal use of the software. The workflow, including workbook setup and expected attendance sheet structure, is as follows:
+  As InDepth was created anticipating a certain attendance sheet structure, a detailed explanation is required for optimal use of the software. The workflow, including workbook setup and expected attendance sheet structure, is as follows:
 
 1. The Attendance Workbook should be made in Google Sheets, and have the following sheets: 
     a. A master attendance sheet: used to store a copy of each event’s attendance data on the same sheet
@@ -81,7 +80,7 @@ As InDepth was created anticipating a certain attendance sheet structure, a deta
 7. Finally, the user can generate demographic bar charts that chart the attendance count vs. the total attendance by category, year, and major of the different events. The user has the option to select the metric category, choosing between total (all events), or by event category.
 
 ## Conclusion
-InDepth reduces the time necessary to parse attendance sheets by 85%, with the initial setup of a workbook taking only 10 minutes, and each individual event parsing taking 2 minutes. The software will be put into practical use during the 2024-25 school year, with improvements being made as need arises. Before publishing the software, we have several enhancements in mind to make its use more efficient and intuitive:
+  InDepth reduces the time necessary to parse attendance sheets by 85%, with the initial setup of a workbook taking only 10 minutes, and each individual event parsing taking 2 minutes. The software will be put into practical use during the 2024-25 school year, with improvements being made as need arises. Before publishing the software, we have several enhancements in mind to make its use more efficient and intuitive:
 
 * Update the UI to make it more visually appealing
 * Include a guide to the software, and a diagram of the expected workbook set up to make InDepth more user friendly
@@ -90,8 +89,44 @@ InDepth reduces the time necessary to parse attendance sheets by 85%, with the i
 * Create separate tabs in the application to have functions better separated
 * Create comprehensive documentation of both InDepth’s use and code, so that other organizations are able to adapt it to their specific needs
 
-
 ## Contribution Statement
-For this project, Elle and Ananya both collaborated on writing the code and designing the user interface. They used GitHub to keep track of changes and allow for easy access. During the development of the project, Ananya and Elle would meet in-person to work on the project, which allowed for easy communication and helped each other write each part of the code. This enabled both to gain experience with writing in R Shiny and figuring the logic behind the functions.
+  For this project, Elle and Ananya both collaborated on writing the code and designing the user interface. They used GitHub to keep track of changes and allow for easy access. During the development of the project, Ananya and Elle would meet in-person to work on the project, which allowed for easy communication and helped each other write each part of the code. This enabled both to gain experience with writing in R Shiny and figuring the logic behind the functions.
 
+## Appendix
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./uploadAttendance.jpg}
+  \caption{User Updating Fields to Upadate their Attendance Sheet}
+  \label{fig:uploadAttendance}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./topMembers.jpg}
+  \caption{User Viewing the Top 12 Active Members Based on the Number of Events Attended}
+  \label{fig:topMember}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./eventDemoChar.jpg}
+  \caption{Overall Event Category Statistics Generated by the Unique Member Sheet}
+  \label{fig:overall}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./eventDemoYear.jpg}
+  \caption{Overall Member Year Statistics Generated by the Unique Member Sheet}
+  \label{fig:year}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth, height=0.7\textheight]{./eventDemoMajor.jpg}
+  \caption{Overall Member Major Statistics Generated by the Unique Member Sheet}
+  \label{fig:major}
+\end{figure}
+
+\newpage
 ## References
