@@ -233,7 +233,6 @@ loopThrough <- function(u, crit, metric){
   return(mat)
 }
 
-
 # Define server logic required to draw a histogram
 server <- function(input, output) {
   # globals in server that do not need to be rewritten each time server loads
@@ -249,14 +248,17 @@ server <- function(input, output) {
   
   # observing if general fields are good
   observeEvent(input$submit, {
-    if (nchar(input$masterName) == 0 | nchar(input$uniName) == 0 | nchar(input$errors) == 0 | nchar(input$workbook) == 0 | nchar(input$indivName) == 0 ){ # any input is empty
+    if (is.null(input$masterName) || input$masterName == "" || is.null(input$uniName) || input$uniName == "" || is.null(input$errors) || input$errors == "" || is.null(input$indiv) || input$indiv == "" || is.null(input$workbook) || input$workbook == ""){ 
+      # any input is empty
       showNotification("One or more of the fields are empty. Please ensure that are fields are completed in order to submit.", duration=15)
       initialSubmit(FALSE)
-    }else if (!(input$masterName %in% sheet_names(input$workbook)) | !(input$uniName %in% sheet_names(input$workbook)) | !(input$errors %in% sheet_names(input$workbook)) | !(input$indivName %in% sheet_names(input$workbook))) { # ensures sheet name exists in the workbook
+    } else if (!(input$masterName %in% sheet_names(input$workbook)) | !(input$uniName %in% sheet_names(input$workbook)) | !(input$errors %in% sheet_names(input$workbook)) | !(input$indiv %in% sheet_names(input$workbook))) { 
+      # ensures sheet name exists in the workbook
       print("throw error")
       showNotification("One or more of the sheet names you entered does not exist in the workbook. Please correct the enteries and retry.", duration=15)
       initialSubmit(FALSE)
     } else {
+      # all input has been validated
       initialSubmit(TRUE)
       print("correct sheet names")
       # sets URL value
@@ -276,8 +278,10 @@ server <- function(input, output) {
       emailList(master(), url())
       showNotification("ListServ has been updated!")
     }
+    
     print(initialSubmit)
   })
+  
   # observing if update attendance is called
   observeEvent(input$submit2, {
     print(url())
@@ -348,9 +352,7 @@ server <- function(input, output) {
     }
   })
   
-  
-  
-  
+  # Top Member Stats
   observeEvent(input$memAmt, {
     if (initialSubmit()){
       unique(read_sheet(url(), sheet=uName()))
