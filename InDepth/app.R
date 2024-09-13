@@ -275,8 +275,8 @@ server <- function(input, output) {
       indName(input$indivName)
       indEvents(read_sheet(url(), sheet=indName()))
       # updates list serv
-      emailList(master(), url())
-      showNotification("ListServ has been updated!")
+      #emailList(master(), url())
+      #showNotification("ListServ has been updated!")
     }
     
     print(initialSubmit)
