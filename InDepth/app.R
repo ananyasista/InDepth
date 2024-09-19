@@ -19,10 +19,15 @@ library(shinyjqui)
 library(ggplot2)
 
 # global uses
-eventTypes <- list("Social", "Career", "Workshop", "GBM", "Technical", "IM")
-uni_col <- c("First Name", "Last Name",	"UFID (Ex: 12345678)",	"Year",	"Major",	"Total",	"Social",	"Career",	"Technical", "GBM",	"Workshop", "IM")
-metricTypes <- list("Total", "Career", "Social", "Technical", "GBM", "Workshop", "IM")
-metricTypesc <- c("Total", "Career", "Social", "Technical", "GBM", "Workshop", "IM")
+#eventTypes <- list("Social", "Career", "Workshop", "GBM", "Technical", "IM")
+#uni_col <- c("First Name", "Last Name",	"UFID (Ex: 12345678)",	"Year",	"Major",	"Total",	"Social",	"Career",	"Technical", "GBM",	"Workshop", "IM")
+#metricTypes <- list("Total", "Career", "Social", "Technical", "GBM", "Workshop", "IM")
+#metricTypesc <- c("Total", "Career", "Social", "Technical", "GBM", "Workshop", "IM")
+
+eventTypes <- list("Social", "Sponsor Events", "Career Workshops", "TIP", "Internal Mentorship", "Design Teams", "Outreach", "Corporate Mentorship", "Shadowing", "Alumni Events", "Fundraising", "GBM")
+uni_col <- c("First Name", "Last Name",	"UFID (Ex: 12345678)",	"Year",	"Major",	"Total", "Social", "Sponsor Events", "Career Workshops", "TIP", "Internal Mentorship", "Design Teams", "Outreach", "Corporate Mentorship", "Shadowing", "Alumni Events", "Fundraising", "GBM")
+metricTypes <- list("Total", "Social", "Sponsor Events", "Career Workshops", "TIP", "Internal Mentorship", "Design Teams", "Outreach", "Corporate Mentorship", "Shadowing", "Alumni Events", "Fundraising", "GBM")
+metricTypesc <- c("Total", "Social", "Sponsor Events", "Career Workshops", "TIP", "Internal Mentorship", "Design Teams", "Outreach", "Corporate Mentorship", "Shadowing", "Alumni Events", "Fundraising", "GBM")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -140,7 +145,7 @@ findErrors <- function(url, e, errName){
 # create Uniques sheet
 parseUniques <- function(url, uName, u, e){
   print("entered parser")
-  test <- data.frame(NA, NA, NA, NA, NA, 0, 0, 0, 0, 0, 0, 0)
+  test <- data.frame(NA, NA, NA, NA, NA, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
   print("test data set")
   colnames(test) <- uni_col
   print("test columns set")
@@ -160,7 +165,7 @@ parseUniques <- function(url, uName, u, e){
                                    0,
                                    0,
                                    0,
-                                   0)
+                                   0, 0, 0, 0, 0, 0, 0)
       colnames(member) <- uni_col
       member['Total'] = 1
       member[e$type[[n]]] = 1
@@ -173,11 +178,17 @@ parseUniques <- function(url, uName, u, e){
                            u[index[1], 'Major'],
                            u[index[1], 'Total'],
                            u[index[1], 'Social'],
-                           u[index[1], 'Career'],
-                           u[index[1], 'Technical'],
-                           u[index[1], 'GBM'],
-                           u[index[1], 'Workshop'],
-                           u[index[1], 'IM'])
+                           u[index[1], 'Sponsor Events'],
+                           u[index[1], 'Career Workshops'],
+                           u[index[1], 'TIP'],
+                           u[index[1], 'Internal Mentorship'],
+                           u[index[1], 'Design Teams'],
+                           u[index[1], 'Outreach'],
+                           u[index[1], 'Corporate Mentorship'],
+                           u[index[1], 'Shadowing'],
+                           u[index[1], 'Alumni Events'],
+                           u[index[1], 'Fundraising'],
+                           u[index[1], 'GBM'])
       colnames(member) <- uni_col
       member['Total'] = member['Total'] + 1
       member[e$type[[n]]] = member[e$type[[n]]] + 1
