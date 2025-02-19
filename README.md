@@ -6,24 +6,26 @@
 InDepth is an attendance sheet parser created specifically for the University of Florida organization Women in Computer Science and Engineering (WiCSE), but has features that allow it to be extended to other organizational use. Future extensions to the project include UI enhancements, further documentation, and options that allow the software’s functions to be more customizable to the context of the user.
 
 ## Table of Contents
-- [About & History] (#about-amp-history)
-- [User Guide & Installation] (#user-guide-amp-installation)
-- [How to Use InDepth] (#how-to-use-indepth)
-    - [Features & Functionalities] (#features-amp-functionalities)
-    - [How to Use] (#how-to-use)
-- [How to Contribute] (#how-to-contribute)
-- [Tech Details] (#tech-details)
+- [About and History](#about-and-history)
+- [User Guide and Installation](#user-guide-and-installation)
+- [How to Use InDepth](#how-to-use-indepth)
+    - [Features and Functionalities](#features-and-functionalities)
+    - [How to Use](#how-to-use)
+- [How to Contribute](#how-to-contribute)
+- [Tech Details](#tech-details)
 
-## About & History
+## About and History
 InDepth is a project started by Ananya Sista and Elle Strauss to assist WiCSE secretaries (Ananya held the role back in the 2023-2024 academic year) with attendance data entries and parsing. This project was developed as Ananya's and Elle's STA3100 Final Project in the Spring 2024 semester. Not only did this showcase our proficiency in R but also assisted Ananya in calculating various statistics that WiCSE likes to have, such as event attendance, major and year distribution, etc.
 
 InDepth interfaces directly with Google Sheets, and takes in the URL of an attendance Google Sheets workbook that an organization uses and parses through the data of a specified individual attendance sheet. That data is then appended to a total attendance sheet, a sheet containing unique members and their attendance counts, and an email list to upload to the organization ListServ. 
 
-## User Guide & Installation
+## User Guide and Installation
+***{linking user guides in progress}***
+
 To use InDepth to parse your attendance sheets, please follow the guide linked to install R and get the application.
 
 ## How to Use InDepth
-### Features & Functionalities
+### Features and Functionalities
 - Parses through attendance sheets
     - Adds it to the Total Attendance Sheet
     - Updates the Unique Member Sheet
