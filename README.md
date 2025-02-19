@@ -1,5 +1,5 @@
 # InDepth
-<img src="../InDepth/InDepth/InDepthLogo.png" alt="InDepth Logo" style="display: block; margin-left: auto; margin-right: auto; width=300" />
+<img src="InDepth/InDepth/InDepthLogo.png" alt="InDepth Logo" style="display: block; margin-left: auto; margin-right: auto; width=300" />
 
 💜 *Used By: UF Women in Computer Science & Engineering (WiCSE)* 💜
 
@@ -7,11 +7,12 @@ InDepth is an attendance sheet parser created specifically for the University of
 
 ## Table of Contents
 - [About & History] (#about-&-history)
-- [User Guide & Installation] (#user-guide-and-installation)
-- [How to Use InDepth] (#how-it-works)
-    - [Features] (#features-&-functionalities)
-- [Contribute] (#how-to-contribute)
-- [Tech Details] (#tech-stack)
+- [User Guide & Installation] (#user-guide-&-installation)
+- [How to Use InDepth] (#how-to-use-indepth)
+    - [Features & Functionalities] (#features-&-functionalities)
+    - [How to Use] (#how-to-use)
+- [How to Contribute] (#how-to-contribute)
+- [Tech Details] (#tech-details)
 
 ## About & History
 InDepth is a project started by Ananya Sista and Elle Strauss to assist WiCSE secretaries (Ananya held the role back in the 2023-2024 academic year) with attendance data entries and parsing. This project was developed as Ananya's and Elle's STA3100 Final Project in the Spring 2024 semester. Not only did this showcase our proficiency in R but also assisted Ananya in calculating various statistics that WiCSE likes to have, such as event attendance, major and year distribution, etc.
@@ -21,7 +22,7 @@ InDepth interfaces directly with Google Sheets, and takes in the URL of an atten
 ## User Guide & Installation
 To use InDepth to parse your attendance sheets, please follow the guide linked to install R and get the application.
 
-## How it Works
+## How to Use InDepth
 ### Features & Functionalities
 - Parses through attendance sheets
     - Adds it to the Total Attendance Sheet
@@ -67,7 +68,7 @@ To contribute, please fork the repo and work on any present issues. Once an issu
 
 Appreciate the help!
 
-## Tech Stack
+## Tech Details
 This project uses R and RShiny to create the functionality and display of the application. Below, we have listed all of the R Libraries used within this project.
 
 R Libraries: 
