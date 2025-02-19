@@ -1,15 +1,15 @@
 # InDepth
-<img src="InDepth/InDepth/InDepthLogo.png" alt="InDepth Logo" style="display: block; margin-left: auto; margin-right: auto; width=300" />
+<img src="InDepth/InDepthLogo.png" alt="InDepth Logo" style="display: block; margin-left: auto; margin-right: auto; width=300" />
 
 💜 *Used By: UF Women in Computer Science & Engineering (WiCSE)* 💜
 
 InDepth is an attendance sheet parser created specifically for the University of Florida organization Women in Computer Science and Engineering (WiCSE), but has features that allow it to be extended to other organizational use. Future extensions to the project include UI enhancements, further documentation, and options that allow the software’s functions to be more customizable to the context of the user.
 
 ## Table of Contents
-- [About & History] (#about-&-history)
-- [User Guide & Installation] (#user-guide-&-installation)
+- [About & History] (#about-amp-history)
+- [User Guide & Installation] (#user-guide-amp-installation)
 - [How to Use InDepth] (#how-to-use-indepth)
-    - [Features & Functionalities] (#features-&-functionalities)
+    - [Features & Functionalities] (#features-amp-functionalities)
     - [How to Use] (#how-to-use)
 - [How to Contribute] (#how-to-contribute)
 - [Tech Details] (#tech-details)
